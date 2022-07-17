@@ -21,4 +21,36 @@ Configure tuya switch OpenBK7231T
 
 <p></p>
 <p>connect uart 3.3v !!!!</p>
-<img src="https://github.com/Alexxx113/Tuya-switch-WB3S-WB2S-WB2L/blob/main/firmware uart contacts.jpg" alt="альтернативный текст" />
+
+
+<p></p>
+<b>configure module:</b>
+<p></p>
+<p>P7 btn 1</p>
+<p>P8 rel 1</p>
+
+
+<p>configure MQTT</p>
+
+<b>home assistant config:</b>
+<p>"name" = name switch</p>
+
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto" data-snippet-clipboard-copy-content="">
+  <pre class="notranslate">
+  <code>
+light:
+  - platform: mqtt
+    unique_id: "name"
+    name: "name"
+    state_topic: ""name"/1/get"
+    command_topic: ""name"/1/set"
+    qos: 1
+    payload_on: 1
+    payload_off: 0
+    retain: true
+    availability_topic: ""name"/connected"
+  </code>
+  </pre>
+</div>
+
+
