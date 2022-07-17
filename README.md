@@ -58,8 +58,8 @@ light:
 <p>NTC thermistor a B value of 3950 100k</p>
 <p>resistor 20k</p>
 
-<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/main/solder.jpg" alt="альтернативный текст" />
-<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/main/solder.jpg" alt="альтернативный текст" />
+<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/main/IMG_20220716_181325.jpg" alt="альтернативный текст" />
+<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/main/temp.jpg" alt="альтернативный текст" />
 
 <b>home assistant config:</b>
 <p>"name" = name switch</p>
