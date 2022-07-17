@@ -1,1 +1,1 @@
-# Tuya-switch-WB2S-rf-module-
+# Tuya switch WB2S (rf-module)
