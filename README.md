@@ -24,6 +24,10 @@ Configure tuya switch OpenBK7231T
 
 
 <p></p>
+<p>conect new WIFI "openbk..."</p>
+<p>go "192.168.4.1"</p>
+<p>configure WIFI</p>
+<p></p>
 <b>configure module:</b>
 <p></p>
 <p>P7 btn 1</p>
