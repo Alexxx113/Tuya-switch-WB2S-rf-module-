@@ -7,7 +7,7 @@ Configure tuya switch OpenBK7231T
 <p></p>
 <p>remove mcu</p>
 <p>solder wire</p>
-<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/solder.jpg" alt="альтернативный текст" />
+<img src="https://github.com/Alexxx113/Tuya-switch-WB2S-rf-module-/blob/main/solder.jpg" alt="альтернативный текст" />
 
 
 
