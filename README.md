@@ -86,19 +86,26 @@ sensor:
   <code>
 template:
   sensor:
-    - name: Temperatura NTC
-      unique_id: temperature
-      device_class: temperature
+     - name: Temperatura NTC kabinet
+      unique_id: temperature_kabinet
+      device_class: temperature 
       state: >
         {% set Vo = states('sensor.mqtt_temp_sens')|float %}
-        {% set c1 = 1.009249522e-03 %}
-        {% set c2 = 2.378405444e-04 %}
-        {% set c3 = 2.019202697e-07 %}
-        {% set R1 = 100000 %}
-        {% set R2 = R1 * 1023 / ( Vo - 1 ) %}
-        {% set logR2 = log(R2,10) %}
-        {% set T = ( 1 / ( c1 + c2 * logR2 + c3 * logR2**3 ) - 273.15 )  / 5 -11.3 %}
-        {{ T |round(1) }}
+        {% set res = 200000 %}
+        {% set term  = 100000 %}
+        {% set nom_t  = 27 %}
+        {% set adc  = 3584 %}
+        {% set B = 3950 %}
+
+        {% set tr  =  res / ((adc / Vo) - 1)  %}
+        {% set steinhart = term /  tr%}
+        {% set steinhart1 = log(steinhart) %}
+        {% set steinhart2 = steinhart1 / B %}
+        {% set steinhart3 = steinhart2 + (1.0 / (nom_t + 273.15))%}
+        {% set steinhart4 = 1.0 / steinhart3  %}
+        {% set steinhart5 = steinhart4 - 273.15%}
+
+        {{ steinhart5  |round(2) }}
       unit_of_measurement: '°C'
   </code>
   </pre>
